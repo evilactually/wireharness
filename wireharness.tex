@@ -11,6 +11,7 @@
 
 \usepackage{tikz}
 \usepackage{xstring}
+\usepackage{siunitx}
 
 
 
@@ -51,7 +52,7 @@
 	\parbox[t]{0.93\textwidth}{
 		\raggedleft
 	    \vspace{0.7cm}
-		\textit{Design goals, wire diagram, dimensions, assembly, parts list and cost breakdown.}
+		\textit{Project goals, wire diagram, parts list, dimensions and cost breakdown.}
 	}
 	\center
     \includegraphics[width=0.70\linewidth]{wireharness.jpg}
@@ -87,7 +88,37 @@ Our hypothetical power seat, will have power adjustable \textit{bottom height}, 
 \end{figure}
 \newpage
 \newgeometry{margin=0.75in}
-The role of the power seat wire harness is to conduct electrical current between car power source, mechanical switch assemblies and electrical motors. Our power seat uses 4 electrical motors and 2 switch assemblies. The switch assemblies control which electrical motors receive electrical current as well as which direction it is flowing for each motor. The requirement to control direction of the current makes it impossible to connect all motors to common ground and will double the number of wires running between switch assemblies and electrical motors.
+\section{Electrical Interface}
+The role of the power seat wire harness is to conduct electrical current between \textit{power source}, mechanical \textit{switch assemblies} and electrical \textit{motors}. Our power seat uses \textit{4 electrical motors} and \textit{2 switch assemblies}. The switch assemblies control which electrical motors receive electrical current as well as in which direction it is flowing for each motor.
+
+The first switch assembly is used just for \textit{lumbar support} and controls only one motor, while the second switch assembly controls the other 3 motors, for \textit{height}, \textit{angle} and \textit{distance} adjustments.
+
+The motors used are all \textit{Direct Current} and each is a two-terminal device. Each motor is usually dedicated to adjusting a single parameter, with the exception of \textit{angle} and \textit{height}. Neither of those two parameters are controlled by any single motor, but by two motors working simultaneously: one raises(or lowers) the front and the other the back of the seat.
+
+The power is supplied from without by a lead-acid battery over two terminals, usually with 12\si{\volt} potential between them and hopefully with a fuse somewhere in series as the only current limiting device. 
+
+Each switch assembly requires two power inputs, for both ground and positive potential, meaning a total of 4 power lines is needed. This is a problem, because the power terminal of the car supplies only 2. Additional 2 power lines will have to be spliced from the 2 existing ones in order to supply power for the second switch assembly.
+
+\newpage
+
+\section{Geometrical Constraints}
+
+
+
+Angle and height adjustments are performed by by raising(or lowering) the front and the back of a seat. One motor is used for the front and another for the back.
+
+
+
+
+The requirement to control direction of the current makes it impossible to connect all motors to common ground and will double the number of wires running between switch assemblies and electrical motors.
+
+TODO:\\
+Explain configuration of the motors and how they achieve performing the 4 power adjustments.
+Explain how a switch assembly might be simulated on a circuit level, to improve understanding.\\
+Provide drawing showing how the final harness will look when installed, showing positions of motors and switch assemblies and the seat.\\
+Provide parts list. Parts list should also provide dimensions for wire and loome cuts, and the wire diagram will explain how they must be connected.
+Summarize total cost in parts and assembly time per unit.
+
 
 \nopagebreak 
 \begin{figure}[h]
