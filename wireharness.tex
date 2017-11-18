@@ -15,8 +15,10 @@
 \usepackage{xstring}
 \usepackage{siunitx}
 \usepackage{appendix}
+\usepackage{multirow}
+\usepackage{longtable}
 
-
+\overfullrule=5pt
 
 \begin{document}
 \newcommand{\getx}[1] {\StrBetween{#1}{(}{,}}
@@ -80,7 +82,9 @@
 \end{titlepage}
 \newgeometry{left=0.75in,right=0.75in,top=1in,bottom=0.75in}
 \section{Introduction}
-The goal of this project is to design a power seat harness for a hypothetical 8-way automotive power seat. Power seats use electrical motors to control seat’s relative positioning within the car, as well as its overall shape. Power controls are often combined with additional manual adjustment mechanisms. The type of a power seat is usually specified by quantifying the number of ways it can be adjusted using power controls. This number does not include the number of ways a seat can be adjusted using manual controls and does not alone specify which controls are manual and which are powered. Thus not all 8-way power seats are alike.
+The goal of this project is to design a power seat harness for a hypothetical 8-way automotive power seat. It will not fit any particular car, and is constructed purely as a prototype. However it should highlight the issues that arise in the design of any wire harness.
+
+Power seats use electrical motors to control seat’s relative positioning within the car, as well as its overall shape. Power controls are often combined with additional manual adjustment mechanisms. The type of a power seat is usually specified by quantifying the number of ways it can be adjusted using power controls. This number does not include the number of ways a seat can be adjusted using manual controls and does not alone specify which controls are manual and which are powered. Thus not all 8-way power seats are alike.
 
 Our hypothetical power seat, will have power adjustable \textit{bottom height}, \textit{bottom angle}, \textit{seat distance} from the steering wheel and \textit{lumbar support}. That’s total of 4 adjustable parameters. Since each one of the 4 parameters can be adjusted in 2 ways(increased or decreased) there are total of 8 ways in which seat can be adjusted. In addition to 4 power adjustments, there’s going to be one more manual adjustment: \textit{seatback recline}.
 \begin{figure}[b!]
@@ -91,7 +95,7 @@ Our hypothetical power seat, will have power adjustable \textit{bottom height}, 
 \end{figure}
 \newpage
 \newgeometry{margin=0.75in}
-\section{Electrical Interface}
+\section{Requirements}
 The role of the power seat wire harness is to conduct electrical current between \textit{power source}, mechanical \textit{switch assemblies} and electrical \textit{motors}. Our power seat uses \textit{4 electrical motors} and \textit{2 switch assemblies}. The switch assemblies control which electrical motors receive electrical current as well as in which direction it is flowing for each motor.
 
 The first switch assembly is used just for \textit{lumbar support} and controls only one motor, while the second switch assembly controls the other 3 motors, for \textit{height}, \textit{angle} and \textit{distance} adjustments.
@@ -104,42 +108,144 @@ In order for motors to be able to turn in either direction they must be connecte
 
 Likewise, to be able to control direction of rotation of the motors, each switch assembly requires two power inputs, for both ground and positive potential, meaning a total of 4 power lines is needed. This is a problem, because the power terminal of the car supplies only 2. Additional 2 power lines will have to be spliced from the 2 existing ones in order to supply power for the second switch assembly.
 
-In order to better understand operation of the mechanical switch assemblies it is helpful to consider an equivalent circuit using a common place Double-Pole, Double-Throw or DPDT On-Off switch as shown in Figure \ref{fig:motorcontrol}.
-\vfill
+In order to better understand operation of the mechanical switch assemblies it is helpful to consider an equivalent circuit using a commonplace Double-Pole, Double-Throw or DPDT On-Off switch as shown in Figure \ref{fig:motorcontrol}. The motor will change direction when the switch is flipped.
+%\vfill
 \begin{figure}[h]\label{fig:motorcontrol}
 \centering
 %\def\svgwidth{0.62\columnwidth}
-\def\svgscale{0.6}
+\def\svgscale{0.4}
 \input{motorcontrol.pdf_tex}
 \caption{Equivalent circuit for a switch assembly using DPDT On-Off switch}
 \end{figure}
-
 \newpage
 
-\section{Geometrical Constraints}
+\section{Layout}
+Explain justification behind the layout, draw a diagram.
 
-Angle and height adjustments are performed by by raising(or lowering) the front and the back of a seat. One motor is used for the front and another for the back.
+\section{Materials}
+
+
+\begin{longtable}{c l}
+
+\parbox[c]{4cm}{\includegraphics[width=4cm]{776427-1.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 776427-1 & \textbf{Connector Style:} Male \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$0.85 \\
+\textbf{Number of Positions:} 2 & \textbf{Quantity:} 1 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Red \\
+\textbf{Description:} Connector Housing & \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{776531-3.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 776531-3 & \textbf{Connector Style:} Male \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$1.46 \\
+\textbf{Number of Positions:} 6 & \textbf{Quantity:} 1 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Yellow \\
+\textbf{Description:} Connector Housing & \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{776534-3.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 776534-3 & \textbf{Connector Style:} Female \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$1.06 \\
+\textbf{Number of Positions:} 2 & \textbf{Quantity:} 1 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Yellow \\
+\textbf{Description:} Connector Housing & \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{776524-2.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 776524-2 & \textbf{Connector Style:} Male \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$1.50 \\
+\textbf{Number of Positions:} 4 & \textbf{Quantity:} 1 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Grey \\
+\textbf{Description:} Connector Housing & \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{776532-2.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 776532-2 & \textbf{Connector Style:} Male \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$2.06 \\
+\textbf{Number of Positions:} 8 & \textbf{Quantity:} 1 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Grey \\
+\textbf{Description:} Connector Housing & \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{776492-1.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 776492-1 & \textbf{Wire Size (AWG):} 18-14 \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$0.46 \\
+\textbf{Terminal \& Splice Style:} Socket & \textbf{Quantity:} 20 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Typical Current Rating (A):} 13 \\
+\textbf{Description:} Socket Terminal  & \textbf{Mating Pin Diameter:} 1.588\si{\milli\meter} \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{2098250-1.png} }
+& \begin{tabular}{l l}
+\textbf{Part Number:} 2098250-1 & \textbf{Wire Size (AWG):} 18-14 \\
+\textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$0.27 \\
+\textbf{Terminal \& Splice Style:} Pin & \textbf{Quantity:} 2 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Typical Current Rating (A):} 13 \\
+\textbf{Description:} Pin Terminal  & \textbf{Mating Pin Diameter:} 1.588\si{\milli\meter} \\
+\end{tabular} \\
+
+\end{longtable}
 
 
 
+% \begin{tabular}{c l l}
+% \multirow{6}{*}{ \parbox[c]{4cm}{\includegraphics[width=4cm]{776427-1.png} } }
+% & \multicolumn{1}{p{6cm}}{ 
+% \textbf{Part Number: 776427-1} \newline
+% \textbf{Manufacturer: TE Connectivity} \newline 
+% \textbf{Number of Positions: } \newline 
+% }
+% & \multicolumn{1}{p{6cm}}{ 
+% \textbf{Connector Style:} \newline 
+% \textbf{Unit Price:} \newline 
+% \textbf{Quantity:} \newline 
+% \hline
+% } \\
+% \multirow{6}{*}{ \parbox[c]{4cm}{\includegraphics[width=4cm]{776427-1.png} } }
+% & \multicolumn{1}{p{6cm}}{ 
+% \textbf{Part Number: 776427-1} \newline
+% \textbf{Manufacturer: TE Connectivity} \newline 
+% \textbf{Number of Positions: } \newline 
+% \textbf{Connector Style:} \newline 
+% \textbf{Unit Price:} \newline 
+% \textbf{Quantity:} \newline 
+% } \\ 
 
-The requirement to control direction of the current makes it impossible to connect all motors to common ground and will double the number of wires running between switch assemblies and electrical motors.
+% \end{tabular}
+
+\section{Wiring Diagram}
+The wiring diagram in Figure \ref{fig:wiringdiagram} on the next page specifies the exact connections that need to exist between different connector housings for the wiring harness to function. It also specifies the location of the splice. 
+
+\nopagebreak 
+\begin{figure}[h]\label{fig:wiringdiagram}
+\centering
+\def\svgwidth{\columnwidth}
+\input{wiringdiagram.pdf_tex}
+\caption{Wiring diagram}
+\end{figure}
+\clearpage
+
+
+\section{Assembly}
+Describe every step used to construct the harness, as well as any additional tools required, from raw parts to end product.
+
+\section{Testing}
+Explain how the harness could be tested.
 
 TODO:\\
-Explain configuration of the motors and how they achieve performing the 4 power adjustments.
-Explain how a switch assembly might be simulated on a circuit level, to improve understanding.\\
+
+
 Provide drawing showing how the final harness will look when installed, showing positions of motors and switch assemblies and the seat.\\
 Provide parts list. Parts list should also provide dimensions for wire and loom cuts, and the wire diagram will explain how they must be connected.
 Summarize total cost in parts and assembly time per unit.
 
 
-\nopagebreak 
-\begin{figure}[h]
-\centering
-\def\svgwidth{0.5\columnwidth}
-\input{776532-3.pdf_tex}
-\end{figure}
-\clearpage
 
 \appendix
 \section{\\Switch Assembly Equivalent Circuit} \label{appendixa}
