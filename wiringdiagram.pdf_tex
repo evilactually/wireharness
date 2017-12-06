@@ -1,0 +1,121 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'wiringdiagram.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{614.28903536bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.26141111)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{wiringdiagram.pdf}}%
+    \put(0.18229625,1.07276018){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.23234506,1.07318743){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.28281795,1.07358331){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.18262741,0.96627645){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.23425722,0.96664864){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.28223582,0.96602571){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{wiringdiagram.pdf}}%
+    \put(0.76996862,0.26089029){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.83113553,0.26072044){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.83152479,0.20991849){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.76972998,0.20978084){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{wiringdiagram.pdf}}%
+    \put(0.29644049,0.23702227){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.24202003,0.23698721){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.3492707,0.23756842){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.18888089,0.23712441){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.34912174,0.12426115){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.29437579,0.12468982){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.24222067,0.12542102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{7\\  }}}%
+    \put(0.18866756,0.12548557){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{8}}}%
+    \put(0.13969378,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.1761586,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{8}}}%
+    \put(0.21262364,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.24908871,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{7}}}%
+    \put(0.28555378,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.32201886,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.35848394,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.394949,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.13969378,0.86277146){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.1761586,0.86277146){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.21262364,0.86277146){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.24908871,0.86277146){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.28555378,0.86277146){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.32201886,0.86277146){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.74657651,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.78304159,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{wiringdiagram.pdf}}%
+    \put(0.5764668,0.59205001){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.61345371,0.59183197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.21451751,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 2 WIRE 1}}}}%
+    \put(0.24839146,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 2 WIRE 2}}}}%
+    \put(0.43488008,0.52147633){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{GND}}}%
+    \put(0.42836848,0.5592299){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+12V}}}%
+    \put(0.58045328,0.06238337){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{776524-2: To 2-way lumbar switch assembly}}}}%
+    \put(0.0672064,0.00375789){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{776532-2: To 6-way switch assembly}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{wiringdiagram.pdf}}%
+    \put(0.57011242,0.68063392){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.62430103,0.68025005){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.46572389,0.92143159){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{776427-1: To power source}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{wiringdiagram.pdf}}%
+    \put(0.81055824,1.05802585){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.8595761,1.05764204){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.65896694,1.18053073){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{776524-2: To single lumbar DC motor}}}}%
+    \put(0.07545926,1.2476851){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{776531-3: To a group of 3 DC motors}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{wiringdiagram.pdf}}%
+    \put(0.81836682,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.85255269,0.41477198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{wiringdiagram.pdf}}%
+    \put(0.13898303,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 1 WIRE 1}}}}%
+    \put(0.17544795,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 1 WIRE 2}}}}%
+    \put(0.28485638,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 3 WIRE 1}}}}%
+    \put(0.3213213,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 3 WIRE 2}}}}%
+    \put(0.81733858,0.91694263){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.85381884,0.91861819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.81358408,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 4 WIRE 1}}}}%
+    \put(0.850049,0.64832266){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{MOTOR 4 WIRE 2}}}}%
+    \put(0.56918501,0.46626395){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Splice}}}%
+  \end{picture}%
+\endgroup%

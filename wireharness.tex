@@ -44,12 +44,11 @@
 			\parbox[t]{0.91\textwidth}{ % Inner box for inner right text margin
 				\raggedleft % Right align the text
 				\fontsize{50pt}{50pt}\selectfont % Title font size, the first argument is the font size and the second is the line spacing, adjust depending on title length
-				\vspace{0.7cm} % Space between the start of the title and the top of the grey box
+				\vspace{0.6cm} % Space between the start of the title and the top of the grey box
 				
 				Power Seat \\ 
-				Wire Harness\\
-				
-				\vspace{0.7cm} % Space between the end of the title and the bottom of the grey box
+				Wiring Harness\\
+				\vspace{0.6cm} % Space between the end of the title and the bottom of the grey box
 			}
 		}
 	}
@@ -57,10 +56,10 @@
 	\parbox[t]{0.93\textwidth}{
 		\raggedleft
 	    \vspace{0.7cm}
-		\textit{Project goals, wire diagram, parts list, dimensions and cost breakdown.}
+		\textit{Project goals, dimensions, parts list, cost breakdown, and wiring diagram.}
 	}
 	\center
-    \includegraphics[width=0.70\linewidth]{wireharness.jpg}
+    \includegraphics[width=0.80\linewidth]{1122171514.jpg}
 
 	\vfill % Space between the title box and author information
 	
@@ -78,25 +77,25 @@
 		
 		%\hfill\rule{0.247\linewidth}{1pt}% Horizontal line, first argument width, second thickness
 	}
+
 	
 \end{titlepage}
 \newgeometry{left=0.75in,right=0.75in,top=1in,bottom=0.75in}
-\section{Introduction}
-The goal of this project is to design a power seat harness for a hypothetical 8-way automotive power seat. It will not fit any particular car, and is constructed purely as a prototype. However it should highlight the issues that arise in the design of any wire harness.
+\section{Overview}
+The goal of this project is to design a power seat harness for a hypothetical 8-way automotive power seat. It will not fit any particular car, and is constructed purely as a prototype. However it should highlight the issues that arise in the design of any wiring harness.
 
 Power seats use electrical motors to control seat’s relative positioning within the car, as well as its overall shape. Power controls are often combined with additional manual adjustment mechanisms. The type of a power seat is usually specified by quantifying the number of ways it can be adjusted using power controls. This number does not include the number of ways a seat can be adjusted using manual controls and does not alone specify which controls are manual and which are powered. Thus not all 8-way power seats are alike.
 
 Our hypothetical power seat, will have power adjustable \textit{bottom height}, \textit{bottom angle}, \textit{seat distance} from the steering wheel and \textit{lumbar support}. That’s total of 4 adjustable parameters. Since each one of the 4 parameters can be adjusted in 2 ways(increased or decreased) there are total of 8 ways in which seat can be adjusted. In addition to 4 power adjustments, there’s going to be one more manual adjustment: \textit{seatback recline}.
-\begin{figure}[b!]
-  \centering
-  \includegraphics[width=0.70\linewidth]{8-way-seat.jpg}
-  \caption{8-way power seat with manual backseat recline adjustment.}
-  \label{fig:wireharness1}
-\end{figure}
-\newpage
-\newgeometry{margin=0.75in}
+% \begin{figure}[b!]
+%   \centering
+%   \includegraphics[width=0.70\linewidth]{8-way-seat.jpg}
+%   \caption{8-way power seat with manual backseat recline adjustment.}
+%   \label{fig:wireharness1}
+% \end{figure}
+
 \section{Requirements}
-The role of the power seat wire harness is to conduct electrical current between \textit{power source}, mechanical \textit{switch assemblies} and electrical \textit{motors}. Our power seat uses \textit{4 electrical motors} and \textit{2 switch assemblies}. The switch assemblies control which electrical motors receive electrical current as well as in which direction it is flowing for each motor.
+The role of the power seat wiring harness is to conduct electrical current between \textit{power source}, mechanical \textit{switch assemblies} and electrical \textit{motors}. Our power seat uses \textit{4 electrical motors} and \textit{2 switch assemblies}. The switch assemblies control which electrical motors receive electrical current as well as in which direction it is flowing for each motor.
 
 The first switch assembly is used just for \textit{lumbar support} and controls only one motor, while the second switch assembly controls the other 3 motors, for \textit{height}, \textit{angle} and \textit{distance} adjustments.
 
@@ -108,7 +107,11 @@ In order for motors to be able to turn in either direction they must be connecte
 
 Likewise, to be able to control direction of rotation of the motors, each switch assembly requires two power inputs, for both ground and positive potential, meaning a total of 4 power lines is needed. This is a problem, because the power terminal of the car supplies only 2. Additional 2 power lines will have to be spliced from the 2 existing ones in order to supply power for the second switch assembly.
 
-In order to better understand operation of the mechanical switch assemblies it is helpful to consider an equivalent circuit using a commonplace Double-Pole, Double-Throw or DPDT On-Off switch as shown in Figure \ref{fig:motorcontrol}. The motor will change direction when the switch is flipped.
+\newpage
+\newgeometry{margin=0.75in}
+\section{Equivalent Circuit}
+
+In order to better understand operation of the mechanical switch assemblies it is helpful to consider an equivalent circuit using a commonplace Double-Pole, Double-Throw or DPDT On-Off switch as shown in Figure 1. The motor will change direction when the switch is flipped.
 %\vfill
 \begin{figure}[h]\label{fig:motorcontrol}
 \centering
@@ -117,13 +120,45 @@ In order to better understand operation of the mechanical switch assemblies it i
 \input{motorcontrol.pdf_tex}
 \caption{Equivalent circuit for a switch assembly using DPDT On-Off switch}
 \end{figure}
-\newpage
 
 \section{Layout}
-Explain justification behind the layout, draw a diagram.
+Figure 2 on the next page outlines the general layout of the wiring harness as well as exact dimensions of different sections. Black lines indicate sections of wires protected by plastic loom, gray lines are unprotected wire sections.
 
+% \begin{figure}[h]\label{fig:motorcontrol}
+% \centering
+% %\def\svgwidth{0.62\columnwidth}
+% \def\svgwidth{0.61\linewidth}
+% \input{layout.pdf_tex}
+% \caption{Equivalent circuit for a switch assembly using DPDT On-Off switch}
+% \end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\linewidth]{layout.pdf}
+  \caption{Layout of the wiring harness}
+  \label{fig:layout}
+\end{figure}
+
+% \begin{figure}[h!]
+%   \centering
+%   \includegraphics[width=0.73\linewidth]{layout.png}
+%   \caption{Layout of the wiring harness}
+%   \label{fig:wireharness1}
+% \end{figure}
+
+\newpage
 \section{Materials}
+This section lists all the parts required to assemble the harness. Where materials need to be cut to specific lengths(such as wires and plastic tubes), all cut lengths are specified.
 
+% The connector housing used for this harness are all from AMPSEAL 16 series made by TE Connectivity. They were chosen for their rugged construction, environmental sealing and locking features. 
+
+% To protect the wires, 3/8" flame-retardant convoluted split plastic tubing was used. The single diameter was big enough to hold up to 12 of 18 AWG wires in the thickest parts, like near the switch assembles, and thin enough to hold down to 2 wires snugly in power source and lumbar motor sections.
+
+% Heat shrunk rubber tubing was used to terminate the ends of the plastic loom tubing. Where a single heat shrink tube wouldn't have enough shrink ratio to hold down a bundle of wires reliably, a two stage approach was utilized made up of a piece of 3/4" and of 3/8" shrink tube sections. 
+
+% Use of tape was minimized on purpose, as it is usually the first component to fail and wear out under stress. The only two important places where tape was used are the T-section and a Y-branch. There a special non-adhesive silicone tape was used: it's a kind of tape that only sticks to itself. It is difficult to work with, but it's main advantage is it's clay-like ability to conform to any shape and it's python-strong grip with itself once it fuses.
+
+% The wire used for this harness is a cheap hook up wire, because it was cheaper to buy it as a set of different colors. A more reliable primary wire should be used for a real wire harness.
 
 \begin{longtable}{c l}
 
@@ -133,7 +168,7 @@ Explain justification behind the layout, draw a diagram.
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$0.85 \\
 \textbf{Number of Positions:} 2 & \textbf{Quantity:} 1 \\
 \textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Red \\
-\textbf{Description:} Connector Housing & \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Connector Housing } \\
 \end{tabular} \\
 
 \parbox[c]{5cm}{\includegraphics[width=5cm]{776531-3.png} }
@@ -142,7 +177,7 @@ Explain justification behind the layout, draw a diagram.
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$1.46 \\
 \textbf{Number of Positions:} 6 & \textbf{Quantity:} 1 \\
 \textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Yellow \\
-\textbf{Description:} Connector Housing & \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Connector Housing } \\
 \end{tabular} \\
 
 \parbox[c]{5cm}{\includegraphics[width=5cm]{776534-3.png} }
@@ -151,7 +186,7 @@ Explain justification behind the layout, draw a diagram.
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$1.06 \\
 \textbf{Number of Positions:} 2 & \textbf{Quantity:} 1 \\
 \textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Yellow \\
-\textbf{Description:} Connector Housing & \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Connector Housing } \\
 \end{tabular} \\
 
 \parbox[c]{5cm}{\includegraphics[width=5cm]{776524-2.png} }
@@ -160,7 +195,7 @@ Explain justification behind the layout, draw a diagram.
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$1.50 \\
 \textbf{Number of Positions:} 4 & \textbf{Quantity:} 1 \\
 \textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Grey \\
-\textbf{Description:} Connector Housing & \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Connector Housing } \\
 \end{tabular} \\
 
 \parbox[c]{5cm}{\includegraphics[width=5cm]{776532-2.png} }
@@ -169,28 +204,126 @@ Explain justification behind the layout, draw a diagram.
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$2.06 \\
 \textbf{Number of Positions:} 8 & \textbf{Quantity:} 1 \\
 \textbf{Product Series:} AMPSEAL 16 & \textbf{Color:} Grey \\
-\textbf{Description:} Connector Housing & \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Connector Housing } \\
 \end{tabular} \\
 
 \parbox[c]{5cm}{\includegraphics[width=5cm]{776492-1.png} }
 & \begin{tabular}{l l}
 \textbf{Part Number:} 776492-1 & \textbf{Wire Size (AWG):} 18-14 \\
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$0.46 \\
-\textbf{Terminal \& Splice Style:} Socket & \textbf{Quantity:} 20 \\
-\textbf{Product Series:} AMPSEAL 16 & \textbf{Typical Current Rating (A):} 13 \\
-\textbf{Description:} Socket Terminal  & \textbf{Mating Pin Diameter:} 1.588\si{\milli\meter} \\
+\textbf{Terminal Style:} Socket & \textbf{Quantity:} 20 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Current Rating (A):} 13 \\
+\textbf{Description:} Socket Terminal  & \textbf{Pin Diameter:} 1.588\si{\milli\meter} \\
 \end{tabular} \\
 
 \parbox[c]{5cm}{\includegraphics[width=5cm]{2098250-1.png} }
 & \begin{tabular}{l l}
 \textbf{Part Number:} 2098250-1 & \textbf{Wire Size (AWG):} 18-14 \\
 \textbf{Manufacturer:} TE Connectivity & \textbf{Unit Price:} \$0.27 \\
-\textbf{Terminal \& Splice Style:} Pin & \textbf{Quantity:} 2 \\
-\textbf{Product Series:} AMPSEAL 16 & \textbf{Typical Current Rating (A):} 13 \\
-\textbf{Description:} Pin Terminal  & \textbf{Mating Pin Diameter:} 1.588\si{\milli\meter} \\
+\textbf{Terminal Style:} Pin & \textbf{Quantity:} 2 \\
+\textbf{Product Series:} AMPSEAL 16 & \textbf{Current Rating (A):} 13 \\
+\textbf{Description:} Pin Terminal  & \textbf{Pin Diameter:} 1.588\si{\milli\meter} \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{3by8loomtubing.jpeg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} Electriduct Inc & \textbf{Price per Inch:} \$0.12 \\
+\textbf{Diameter:} 3/4" & \textbf{Cut Lengths:} 44", 20", 1" \\
+\textbf{Description:} Split Wire Loom Tubing & \textbf{Total Lengths:} 65" \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{redwire.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} CBAZY & \textbf{Price per Inch:} \$0.02 \\
+\textbf{Size:} 18AWG & \textbf{Cut Lengths:} 46"x2 \\
+\textbf{Color:} Red  & \textbf{Total Length:} 92" \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Stranded Hook-up Wire } \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{greenwire.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} CBAZY & \textbf{Price per Inch:} \$0.02 \\
+\textbf{Size:} 18AWG & \textbf{Cut Lengths:} 46"x2 \\
+\textbf{Color:} Green  & \textbf{Total Length:} 92" \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Stranded Hook-up Wire } \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{bluewire.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} CBAZY & \textbf{Price per Inch:} \$0.02 \\
+\textbf{Size:} 18AWG & \textbf{Cut Lengths:} 46"x2 \\
+\textbf{Color:} Blue  & \textbf{Total Length:} 92" \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Stranded Hook-up Wire } \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{whitewire.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} CBAZY & \textbf{Price per Inch:} \$0.02 \\
+\textbf{Size:} 18AWG & \textbf{Cut Lengths:} 50.5"x2 \\
+\textbf{Color:} White  & \textbf{Total Length:} 101" \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Stranded Hook-up Wire } \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{yellowire.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} CBAZY & \textbf{Price per Inch:} \$0.02 \\
+\textbf{Size:} 18AWG & \textbf{Cut Lengths:} 14"x2, 30.5x2" \\
+\textbf{Color:} Yellow  & \textbf{Total Length:} 89" \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Stranded Hook-up Wire } \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{blackwire.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} CBAZY & \textbf{Price per Inch:} \$0.02 \\
+\textbf{Size:} 18AWG & \textbf{Cut Lengths:} 13"x2, 31.5x2" \\
+\textbf{Color:} Black  & \textbf{Total Length:} 89" \\
+\multicolumn{2}{p{8cm}}{\textbf{Description:} Stranded Hook-up Wire} \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{splice-terminal.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} Ginsco & \textbf{Unit Price:} \$0.05 \\
+\textbf{Size:} 14-16AWG & \textbf{Material:} Tinned Copper \\
+\textbf{Description:} Splice terminal & \textbf{Quantity:} 2 \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{firetape.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} DEI & \textbf{Unit Price:} \$30.63 \\
+\textbf{Price Per Inch:} \$0.07 & \textbf{Total Length:} 20" \\
+\textbf{Marketing Name:} Fire Tape & \textbf{Quantity:} 1 \\
+\textbf{Width:} 1" & \textbf{Length:} 36' \\
+\multicolumn{2}{p{10cm}}{\textbf{Description:} Self-Vulcanizing Silicone Rubber Tape} \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{3by8shrinktube.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} SES & \textbf{Price per Inch:} \$0.03 \\
+\textbf{Diameter:} 3/8" & \textbf{Cut Lengths:} 1"x2 \\
+\textbf{Color:} Black  & \textbf{Total Length:} 2" \\
+\multicolumn{2}{p{10cm}}{\textbf{Description:} Dual-Wall Adhesive Heat Shrink Tube } \\
+\end{tabular} \\
+
+\parbox[c]{5cm}{\includegraphics[width=5cm]{3by4shrinktube.jpg} }
+& \begin{tabular}{l l}
+\textbf{Manufacturer:} Temco & \textbf{Price per Inch:} \$0.13 \\
+\textbf{Diameter:} 3/4" & \textbf{Cut Lengths:} 1.5"x4 \\
+\textbf{Color:} Black  & \textbf{Total Length:} 6" \\
+\multicolumn{2}{p{10cm}}{\textbf{Description:} Dual-Wall Adhesive Heat Shrink Tube } \\
+\end{tabular} \\
+% REDx2, GREENx2, BLUEx2 - 46"
+% WHITEx2 - 51"
+% Yellow 14"x2, 30.5
+% Black 13", 31.5
+
+& 
+\begin{tabular}{l} 
+\hline \\
+\textbf{Total Cost Of Materials:} \$37.95 \\
 \end{tabular} \\
 
 \end{longtable}
+
 
 
 
@@ -220,39 +353,15 @@ Explain justification behind the layout, draw a diagram.
 % \end{tabular}
 
 \section{Wiring Diagram}
-The wiring diagram in Figure \ref{fig:wiringdiagram} on the next page specifies the exact connections that need to exist between different connector housings for the wiring harness to function. It also specifies the location of the splice. 
+The wiring diagram in Figure 3 on the next page specifies the exact connections that need to exist between different connector housings for the wiring harness to function.
 
 \nopagebreak 
-\begin{figure}[h]\label{fig:wiringdiagram}
+\begin{figure}[h]\label{fig:wiring}
 \centering
 \def\svgwidth{\columnwidth}
 \input{wiringdiagram.pdf_tex}
 \caption{Wiring diagram}
 \end{figure}
 \clearpage
-
-
-\section{Assembly}
-Describe every step used to construct the harness, as well as any additional tools required, from raw parts to end product.
-
-\section{Testing}
-Explain how the harness could be tested.
-
-TODO:\\
-
-
-Provide drawing showing how the final harness will look when installed, showing positions of motors and switch assemblies and the seat.\\
-Provide parts list. Parts list should also provide dimensions for wire and loom cuts, and the wire diagram will explain how they must be connected.
-Summarize total cost in parts and assembly time per unit.
-
-
-
-\appendix
-\section{\\Switch Assembly Equivalent Circuit} \label{appendixa}
-In order to better understand operation of the mechanical switch assemblies it is helpful to construct an equivalent circuit using a common place DPDT On-Off switch.
-
-The requirement to have two power inputs for each switch assembly stems from the need to control direction of rotation of the motors. If that requirement was not in place all motors could be connected to common ground and be connected to switches by a single control wire, in turn the each switch would only need a positive potential as power input.
-
-Refer to \ref{appendixa} to understand why each switch requires two power inputs instead of one.
 
 \end{document}
